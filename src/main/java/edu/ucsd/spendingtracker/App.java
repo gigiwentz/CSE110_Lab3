@@ -72,13 +72,11 @@ class ExpenseList extends VBox {
     // Pre-populate with hardcoded data as requested
     private void prePopulateData() {
         this.getChildren().addAll(
-            new Expense(1, "Groceries", Category.FOOD, 45.50),
-            new Expense(2, "Gas Fill-up", Category.TRANSPORT, 38.00),
-            new Expense(3, "Movie Night", Category.ENTERTAINMENT, 15.25),
-            new Expense(4, "Internet Bill", Category.UTILITIES, 60.00),
-            new Expense(5, "Coffee", Category.FOOD, 5.75),
-            new Expense(6, "Bus Pass", Category.TRANSPORT, 25.00),
-            new Expense(7, "Spotify", Category.ENTERTAINMENT, 10.99)
+            new Expense(1,"Groceries", Category.FOOD, 101.75),
+            new Expense(2, "Utilities", Category.UTILITIES, 80.50),
+            new Expense(3, "Gas", Category.TRANSPORT, 60.00),
+            new Expense(4, "Movie Tickets", Category.ENTERTAINMENT, 30.00),
+            new Expense(5, "Online Order", Category.OTHER, 45.25)
             
         );
     }
@@ -93,10 +91,8 @@ class Header extends HBox {
         Text titleText = new Text("Spending Tracker");
         titleText.setStyle("-fx-font-weight: bold; -fx-font-size: 24;");
         
-        Text subText = new Text("Monthly Overview");
-        subText.setStyle("-fx-font-style: italic; -fx-font-size: 12; -fx-fill: #666666;");
         
-        container.getChildren().addAll(titleText, subText);
+        container.getChildren().addAll(titleText);
         container.setAlignment(Pos.CENTER);
         
         this.getChildren().add(container);
